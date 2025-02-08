@@ -9,19 +9,19 @@
     align-items: flex-end;
 } */
 
-body, html {
+/* body, html {
     height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #47BFDF ;
-    /* background-image: url("https://i.gifer.com/XFbw.gif");
+     background-image: url("https://i.gifer.com/XFbw.gif");
     background-size: cover;
-    background-repeat: no-repeat; */
-}
+    background-repeat: no-repeat; 
+} */
 
-.container {
+/* .container {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -34,9 +34,13 @@ body, html {
 .imagediv img {
     width: 350px;
     margin-bottom: 40px;
-}
+} */
 
-.getstarted {
+/* .container{
+    margin: auto auto;
+} */
+
+/* .getstarted {
     padding: 10px 20px;
     margin-top: 4rem;
     width: 15rem;
@@ -45,4 +49,41 @@ body, html {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #47BFDF; */
+    background-image: url(" https://yakuphantonintshi.github.io/myimages/Images/sunset.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.row{
+    width: 350px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+.getstarted{
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+}
+
+.getstarted:hover{
+    background-color: #f6a14d;
+    color: white;
+    border: 2px solid white;
+}
+h1{
+    color: white;
+    text-shadow: 6px 6px 10px #f6a14d;
+    font-size: 3rem;
+    margin-left: 4rem;
 }
