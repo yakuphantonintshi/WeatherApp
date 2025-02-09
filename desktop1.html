@@ -20,8 +20,25 @@
         <h3 id="weatherResult"></h3>
         <!-- <i class="bi bi-search"></i> -->
     </div>
+        <img id="sunnyImage" src="https://w7.pngwing.com/pngs/159/217/png-transparent-weather-sun-shine-sunny-icon.png" alt="Sunny">
+        <img id="cloud" src="https://cdn1.iconfinder.com/data/icons/weather-429/64/weather_icons_color-02-512.png" alt="clouds">
+    <div class="grid-container" id="weatherGrid">
+        <div class="grid-item"><strong>City:</strong> <span id="cityName"></span></div>
+        <div class="grid-item"><strong>Temperature:</strong> <span id="temp"></span>°C</div>
+        <div class="grid-item"><strong>Feels Like:</strong> <span id="feelsLike"></span>°C</div>
+        <div class="grid-item"><strong>Min Temp:</strong> <span id="tempMin"></span>°C</div>
+        <div class="grid-item"><strong>Max Temp:</strong> <span id="tempMax"></span>°C</div>
+        <div class="grid-item"><strong>Humidity:</strong> <span id="humidity"></span>%</div>
+        <div class="grid-item"><strong>Weather:</strong> <span id="description"></span></div>
+        <div class="grid-item"><strong>Wind Speed:</strong> <span id="windSpeed"></span> m/s</div>
+      </div>
+      
 
     <script>
+        // function showGrid() {
+        //     const grid = document.getElementById("grid");
+        //     grid.style.display = "grid"; // Show the grid
+        // }
         const apiKey = "1e83e3fbbba4a5024d44e6f4d43ec4d5";
 
         async function getWeather() {
@@ -42,8 +59,29 @@
                     return;
                 }
 
-                document.getElementById("weatherResult").innerText = 
-                    `Temperature in ${data.name}: ${data.main.temp}°C, ${data.weather[0].description}`;
+                document.getElementById("cityName").innerText = data.name;
+                document.getElementById("temp").innerText = data.main.temp;
+                document.getElementById("feelsLike").innerText = data.main.feels_like;
+                document.getElementById("tempMin").innerText = data.main.temp_min;
+                document.getElementById("tempMax").innerText = data.main.temp_max;
+                document.getElementById("humidity").innerText = data.main.humidity;
+                document.getElementById("description").innerText = data.weather[0].description;
+                document.getElementById("windSpeed").innerText = data.wind.speed;
+
+                // Show the grid
+                document.getElementById("weatherGrid").style.display = "grid";
+
+                if (data.main.temp > 10) {
+                    document.getElementById("sunnyImage").style.display = "block";
+                } else if (data.main.temp < 10) {
+                    document.getElementById("cloud").style.display = "block";
+                } else {
+                    document.getElementById("sunnyImage").style.display = "none";
+                    
+                }
+                // document.getElementById("weatherResult").innerText = 
+                //     `Temperature in ${data.name}: ${data.main.temp}°C, Feels like: ${data.main.feels_like}°C, Min Temp: ${data.main.temp_min}°C, Max Temp: ${data.main.temp_max}°C, Humidity: ${data.main.humidity}, ${data.weather[0].description}, Wind Speed: ${data.wind.speed}`;
+                // document.getElementById("weatherResult").innerText = JSON.stringify(data, null, 2);
             } catch (error) {
                 console.error("Error fetching weather data:", error);
             }
