@@ -45,12 +45,9 @@ button{
 .grid-container {
     /* display: grid; */
     display: none;
-    grid-template-rows: 50px 50px 50px; /* 3 rows of 100px each */
-    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    grid-template-rows: 50px 50px 50px; 
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
-    /* width: 450px; */
-    /* border: 2px solid black; */
-    /* margin: 0 auto; */
     margin-top: 1.7rem;
   }
   
@@ -67,14 +64,14 @@ button{
     background-color: rgb(43, 43, 241);
   }
   #sunnyImage {
-    display: none; /* Hidden by default */
+    display: none;
     width: 100px;
     height: 100px;
     margin: 0 auto;
     margin-top: 1rem;
 } 
 #cloud{
-    display: none; /* Hidden by default */
+    display: none;
     width: 100px;
     height: 100px;
     margin: 0 auto;
