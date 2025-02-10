@@ -22,17 +22,18 @@ p{
     color: white;
     font-size: 1.8rem;
 }
-.input > input{
+input{
     margin: 0 auto;
+    margin-top: 2rem;
     border-radius: 2.5rem;
     padding: 1rem 2.5rem;
     border: none;
-    width: 350px;
+    width: 400px;
 }
 
-.input>i {
+/* .input>i {
     font-size: 1.2rem;
     position: relative;
     left: -36.5rem;
     top: .8rem;
-}
+} */
