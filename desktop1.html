@@ -35,10 +35,6 @@
       
 
     <script>
-        // function showGrid() {
-        //     const grid = document.getElementById("grid");
-        //     grid.style.display = "grid"; // Show the grid
-        // }
         const apiKey = "1e83e3fbbba4a5024d44e6f4d43ec4d5";
 
         async function getWeather() {
@@ -68,7 +64,6 @@
                 document.getElementById("description").innerText = data.weather[0].description;
                 document.getElementById("windSpeed").innerText = data.wind.speed;
 
-                // Show the grid
                 document.getElementById("weatherGrid").style.display = "grid";
 
                 if (data.main.temp > 10) {
