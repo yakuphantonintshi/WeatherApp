@@ -1,9 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 body{
-    background-color: #47BFDF;
-    height: 100%;
-    width: 100%;
+    background-image: linear-gradient(#000000, #023553);
+    height: 100dvh;
+    max-width: 100dvw;
+    padding-inline: 5rem;
+    margin: 0;
+    padding: 0;
+
 }
 .arrow{
     font-size: 3rem;
@@ -43,38 +47,58 @@ button{
     border: none;
 }
 .grid-container {
-    /* display: grid; */
     display: none;
-    grid-template-rows: 50px 50px 50px; 
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 1.7rem;
+    width: 350px;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .grid-item {
-    background-color: lightblue;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    border: 1px solid #000;
-    /* margin-inline: 3rem; */
-   
-  }
-  .grid-item:hover{
-    background-color: rgb(43, 43, 241);
-  }
+    padding: 10px;
+    font-size: 10px;
+}
+
   #sunnyImage {
     display: none;
     width: 100px;
     height: 100px;
-    margin: 0 auto;
-    margin-top: 1rem;
+    justify-self: center;
 } 
-#cloud{
+#cloud {
     display: none;
     width: 100px;
     height: 100px;
-    margin: 0 auto;
-    margin-top: 1rem;
 }
+.cont{
+    margin-top: 5rem;
+    box-shadow: 2px 2px 5px black;
+    width: 40%;
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 20px;
+    margin-inline: 100px;
+
+   
+}
+
+.imgs{
+    width: 40%;
+}
+
+:is(#sunnyImage, #cloud){
+    width: 10rem;
+    height: auto;
+    border-radius: 1rem;
+}
+
+:is(#cityName, #temp){
+    font-size: x-large;
+}
+
+:is(.title, #tempMin, #description, #tempMax, #windSpeed){
+    font-size: medium;
+}
+.grid-item{
+    color: white;
+}
+
   
