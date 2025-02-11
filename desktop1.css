@@ -27,11 +27,13 @@ p{
     font-size: 1.8rem;
 }
 .input > input{
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 2.5rem;
     padding: 1rem 2.5rem;
     border: none;
     width: 350px;
+    margin-left: 25rem;
+    margin-right: 1rem;
 }
 
 .input>i {
@@ -76,9 +78,20 @@ button{
     min-height: 200px;
     padding: 20px;
     margin-inline: 100px;
-
+    /* display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr; */
    
 }
+   
+    .cards {
+        display: grid; /* Set the container to grid */
+        grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+        gap: 20px; /* Space between cards */
+        justify-items: center; /* Center cards within each grid item */
+        margin-left: 15rem;
+        gap: 30px;
+    }
 
 .imgs{
     width: 40%;
@@ -100,5 +113,18 @@ button{
 .grid-item{
     color: white;
 }
+button{
+    background-color:#2a9adf;
+    color: white;
+}
 
-  
+.card-title{
+    color: white;
+}
+.card-text{
+    font-size: smaller;
+}
+.card{
+    box-shadow: 5px 5px 10px blue;
+    height: 100px;
+}
