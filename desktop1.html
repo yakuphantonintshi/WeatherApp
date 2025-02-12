@@ -90,6 +90,40 @@
       </div>
     </div>
     </div>
+    <div class="forecast" style="display: none">
+      <div class="card" style="width: 18rem;" id="cards">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;"id="cards">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="cards">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" id="cards">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
 
     <script>
       const apiKey = "1e83e3fbbba4a5024d44e6f4d43ec4d5";
@@ -135,10 +169,12 @@
 
           if (data.main.temp > 10) {
             document.querySelector(".cont").style.display = "flex";
+            document.querySelector(".forecast").style.display = "flex";
             document.getElementById("cloud").style.display = "none";
             document.getElementById("sunnyImage").style.display = "block";
           } else if (data.main.temp < 10) {
             document.querySelector(".cont").style.display = "flex";
+            document.querySelector(".forecast").style.display = "flex";
             document.getElementById("sunnyImage").style.display = "none";
             document.getElementById("cloud").style.display = "block";
           } else {

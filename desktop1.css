@@ -78,6 +78,8 @@ button{
     min-height: 200px;
     padding: 20px;
     margin-inline: 100px;
+    /* border: 1px solid #2a9adf; */
+    box-shadow: 2px 2px 5px #2a9adf;
     /* display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr; */
@@ -127,4 +129,11 @@ button{
 .card{
     box-shadow: 5px 5px 10px blue;
     height: 100px;
+}
+.forecast{
+    margin-top: 3rem;
+    margin-left: 5rem;
+}
+#cards{
+    margin-inline: 2rem;
 }
